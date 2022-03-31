@@ -1,5 +1,7 @@
 # AgendamientoEspecialistaPY
-Proyecto agendamiento espeialista pygroup
+Proyecto agendamiento especialistas pygroup
+
+Julian Stiven Higuera 20161020041
 
 Datos para pruebas
 
