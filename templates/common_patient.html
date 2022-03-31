@@ -1,0 +1,43 @@
+{% extends 'common.html' %}
+
+{% block body %}
+
+   <div class="container ">
+   	<div class="row studnet_nav">
+   	             <div class="col-sm-8">            
+						     <ul class="nav nav-pills">
+								  <li class="nav-item">
+								    <a class="nav-link" href='{% url "patient"%}'>Mis citas</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href='{% url "quick_appointmnet"%}'>Buscar Citas</a>
+								  </li>
+
+							  </ul>	                             
+                  </div>
+
+                 <div class="col-sm-4">
+					     <ul class="nav nav-pills">
+							  <li class="nav-item">
+							    <p class="bienvenido-text">Bienvenido </p> 
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" href="#">{{user_name}}</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" href='{% url "logout"%}'>Cerrar sesion</a>
+							  </li>
+						  </ul>	     
+	       		 </div>
+	  </div>
+    </div>
+
+    {% block common_patient %}
+    
+    {% endblock common_patient %}
+
+{% endblock %}
+
+
+
+

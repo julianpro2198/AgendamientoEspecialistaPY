@@ -1,0 +1,69 @@
+{% extends 'common_doctor.html' %}
+
+{% block common_doctor %}
+
+   <div class="patient">
+           <div class="container">
+          <div class="row min-height">
+              <div class="col-sm-12">
+                             
+                            <div class="row main_boder">
+                                <div class="col-sm-7">
+                                     <h3 class="appointmnet_list">Mis Citas</h3>
+                                </div>
+                                <div class="col-sm-5">
+                                      <form class="form-inline my-2 my-lg-0" method="GET" action="">
+                                          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Buscar Nombre" placeholder="Search With Name" aria-label="Search">
+                                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Search">Buscar</button>
+                                       </form>
+
+                                </div>
+ 
+                            </div>
+                             
+                             <table class="table">
+                                 <thead>
+                                  <tr>
+                                    <th scope="col">Paciente</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Hora</th>
+                                    <th scope="col">Lugar</th>
+                                    
+                                  </tr>
+                                </thead>{% for appoint in query %}
+                                {% if appoint.appointment_with != '' %}
+   
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">{{appoint.appointment_with}}</th>
+                                          <td>{{appoint.date}}</td>
+                                          <td>{{appoint.time_start}} - {{appoint.time_end}}</td>
+                                          <td>{{appoint.room_number}}</td>
+                                  </tr>{% endif %}
+                                </tbody>{% endfor %}
+                            </table>
+                                   
+              </div>
+       
+          </div>
+      </div>
+      </div>
+
+      <div class="footer">
+           <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                             Julian Stiven Higuera Hurtado                     
+              </div>
+       
+          </div>
+      </div>
+      </div>
+
+
+
+    
+{% endblock common_doctor %}
+
+
+

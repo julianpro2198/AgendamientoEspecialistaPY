@@ -1,0 +1,42 @@
+{% extends 'common.html' %}
+
+{% block body %}
+
+   <div class="container ">
+   	<div class="row studnet_nav">
+   	             <div class="col-sm-8">            
+						     <ul class="nav nav-pills">
+								  <li class="nav-item">
+								    <a class="nav-link" href='{% url "doctor_home"%}'>Mis Citas</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href='{% url "doctor_appointment_list"%}'>Crear Agenda</a>
+								  </li>
+							  </ul>	                             
+                  </div>
+
+                 <div class="col-sm-4">
+					     <ul class="nav nav-pills">
+							  <li class="nav-item">
+							    <p>Bienvenido </p> 
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" href="#">{{user_name}}</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" href='{% url "logout"%}'>Cerrar sesion</a>
+							  </li>
+						  </ul>	     
+	       		 </div>
+	  </div>
+    </div>
+
+    {% block common_doctor %}
+    
+    {% endblock common_doctor %}
+
+{% endblock %}
+
+
+
+
